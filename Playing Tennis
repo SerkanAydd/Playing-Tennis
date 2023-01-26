@@ -24,7 +24,7 @@ temperature_humidity = datas.iloc[:,1:3].values
 play = datas.iloc[:,-1:].values
 play[:,-1] = le.fit_transform(datas.iloc[:,-1])
 
-result = pd.DataFrame(data = outlook, index = range(14), columns = ["sunny", "overcast", "rainy"])
+result = pd.DataFrame(data = outlook, index = range(14), columns = ["overcast",  "rainy", "sunny",])
 result2 = pd.DataFrame(data = temperature_humidity, index = range(14), columns = ["temperature", "humidity"])
 result3 = pd.DataFrame(data = windy[:,0:1], index = range(14), columns = ["No windy"])
 result4 = pd.concat([result, result2], axis = 1)
